@@ -27,7 +27,9 @@ In parallel, they are defining the **expected outputs** through the [Compliance 
 As of today (15 September 2025), these efforts are ongoing.
 This document aims to provide an overview of existing tools, frameworks, and approaches for ODRL policy evaluation, helping practitioners and researchers navigate the current landscape and contribute to these standardization efforts.
 
-## ODRL Evaluators
+## ODRL Evaluator implementations, projects using ODRL and ODRL tooling
+
+### ODRL Evaluators
 
 An ODRL Evaluator is defined as follows by the [ODRL Information Model 2.2](https://www.w3.org/TR/odrl-model/) as
 
@@ -52,25 +54,47 @@ The table has three columns
 | [Polival](https://codeberg.org/elbtech/Polival)                                                      | Policy and semantic web evaluation <br> Written in Rust and SPAQRL                                                                                                                                                                      | [Elbtech](https://elbtech.dev/) <br> maintainer: Richard Stoffels                                                                                          |
 
 
-## Frameworks using ODRL
+### Frameworks using ODRL
 
 - [ODRL-Test-Suite](https://w3id.org/force/test-suite)
+  - Software that can execute, validate and measure the compliance of an ODRL evaluator over a set of test cases. The test case consists of inputs (a policy, a request and the state of the world) and the expected outcome ([Compliance Report Model](https://w3id.org/force/compliance-report)).
+  - Created by [KNoWS](https://knows.idlab.ugent.be/) for the [Solidlab](https://solidlab.be/) project (maintainer: [Wout Slabbinck](mailto:wout.slabbinck@ugent.be)).
 - [User-Managed Access (UMA) server](https://github.com/SolidLabResearch/user-managed-access)
-- [FORCE UI](https://w3id.org/force/demo)
+  - A [User-Managed Access](https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-grant-2.0.html) infrastructure where the Authorization Server (AS) uses the [ODRL Evaluator](https://w3id.org/force/evaluator) as a Policy engine (Policy Decision Point)
+  - Created by [KNoWS](https://knows.idlab.ugent.be/) for the [Solidlab](https://solidlab.be/) project.
 - [FORCE specification suite](https://w3id.org/force)
+  - The Framework for ODRL Rule Compliance through Evaluation (FORCE) specification suite is designed to assist in ODRL policy development and enhance comprehension of ODRL evaluation outputs. It also enables experimentation and prototyping of ODRL 3.0 proposals. The specification points to other relevant specifications for further details.
+  - Created by [KNoWS](https://knows.idlab.ugent.be/) for the [Solidlab](https://solidlab.be/) (maintainers: [Wout Slabbinck](mailto:wout.slabbinck@ugent.be) and [Beatriz Esteves](mailto:beatriz.esteves@ugent.be)).
+- [FORCE UI](https://w3id.org/force/demo)
+  - The FORCE Web editor is a user interface developed with as goal aiding understanding of ODRL Policy Evaluation and experimenting with new features for ODRL.
+  - Created by [KNoWS](https://knows.idlab.ugent.be/) for the [Solidlab](https://solidlab.be/) (maintainer: [Wout Slabbinck](mailto:wout.slabbinck@ugent.be)).
+- [LOAMA](https://github.com/SolidLabResearch/loama/tree/feat/odrl): Low-code ODRL Access Management Application
+  - Web User Interface to manage ODRL policies in decentralized ecosystems. *Currently only with aforementioned [UMA Server](https://github.com/SolidLabResearch/user-managed-access)*
+  - Created by [KNoWS](https://knows.idlab.ugent.be/) for the [Solidlab](https://solidlab.be/) project (maintainer: [Wout Slabbinck](mailto:wout.slabbinck@ugent.be)).
 - [Gaia-X Wizard](https://wizard.lab.gaia-x.eu/development)
+  - A web interface that contains ODRL Policy Evaluation. It also allows you to create and sign [Verifiable Presentations](https://www.w3.org/TR/vc-data-model-2.0/#verifiable-presentations) as well as obtaining the [Verifiable Credentials](https://www.w3.org/TR/vc-data-model-2.0/) that attest Gaia-X compliance.
+  - Maintained by Yassir Sellami
 - [odrl-evaluation-engine-testbed](https://gitlab.com/gaia-x/lab/policy-reasoning/odrl-toolbox/-/tree/main/odrl-evaluation-engine-testbed)
+  - The ODRL Evaluation testbed provides a basic level tests for an ODRL evaluation engine.
+  - Maintained by Yassir Sellami
 - [Eclipse Dataspace Connector (EDC)](https://github.com/eclipse-edc/Connector)
+  - Implementation of a Dataspace Connector as defined by the [Dataspace Protocol (DSP)](https://eclipse-dataspace-protocol-base.github.io/DataspaceProtocol/) (see DSP in the [protocols section](#protocols-that-point-to-odrl)). In the control plane (the layer that deals with the contracts over the data), ODRL is used.
 - [Solid Agent UCP demo](https://github.com/SolidLabResearch/Solid-Agent/tree/feat/sosy/documentation/ucp)
+  - a Web agent-based solution where an agent decomposes ODRL policies into actionable tasks (such as granting and retracting access to resources) using declarative condition-action rules and takes care of executing such tasks, by modifying the Access Control Rules of [Solid](https://solidproject.org/TR/protocol) resources.
+  - Created by [KNoWS](https://knows.idlab.ugent.be/) for the [Solidlab](https://solidlab.be/) project (maintainer: [Wout Slabbinck](mailto:wout.slabbinck@ugent.be)).
 
+### Protocols that point to ODRL
 
-## Protocols that point to ODRL
+- [Dataspace Protocol (DSP)](https://eclipse-dataspace-protocol-base.github.io/DataspaceProtocol)
+  - The Dataspace Protocol is a specification designed to facilitate interoperable data sharing between entities governed by usage control and based on Web technologies. For usage control and contracts, the ODRL Vocabulary is reused.
+- [Eclipse Dataspace Decentralized Claims Protocol (DCP)](https://eclipse-dataspace-dcp.github.io/decentralized-claims-protocol/)
+  - The DCP defines a set of protocols for asserting participant identities, issuing verifiable credentials, and presenting verifiable credentials using a decentralized architecture for verification and trust. 
+    - Works orthogonally together with the DSP to solve the identity and trust gap.
+- [Authorization for Data Spaces (A4DS)](https://spec.knows.idlab.ugent.be/A4DS/L1/latest/)
+  - A [User-Managed Access](https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-grant-2.0.html) extension that uses ODRL as the policy language for usage control.
+  - Created by [KNoWS](https://knows.idlab.ugent.be/) for the [Solidlab](https://solidlab.be/) project (maintainer: [Wouter Termont](mailto:wouter.termont@ugent.be)).
 
-- [Dataspace Protocol](https://eclipse-dataspace-protocol-base.github.io/DataspaceProtocol)
-- [Eclipse Dataspace Decentralized Claims Protocol](https://eclipse-dataspace-dcp.github.io/decentralized-claims-protocol/)
-- [Authorization for Data Spaces](https://spec.knows.idlab.ugent.be/A4DS/L1/latest/)
-
-## ODRL utilities
+### ODRL utilities
 
 - [MyData ODRL policy creator](https://odrl-pap.mydata-control.de/)
 - [ODRL Shape validation](https://github.com/woutslabbinck/ODRL-shape)
@@ -79,3 +103,6 @@ The table has three columns
 - [LLM4ODRL](https://github.com/Daham-Mustaf/LLM4ODRL)
 - [ODRL2SHACL](https://github.com/paolo7/ODRL2SHACL)
 
+## How to contribute
+
+When there is something missing in this list, feel free to add it yourself by opening a [pull request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork).
