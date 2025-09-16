@@ -27,20 +27,6 @@ In parallel, they are defining the **expected outputs** through the [Compliance 
 As of today (15 September 2025), these efforts are ongoing.
 This document aims to provide an overview of existing tools, frameworks, and approaches for ODRL policy evaluation, helping practitioners and researchers navigate the current landscape and contribute to these standardization efforts.
 
-
-## Why this document matters
-
-Originally, the [Open Digital Rights Language (ODRL)](https://wwwfor **Digital Rights Management (DRM)**, focusing on expressing rights and obligations for digital content. This was also the primary scope during the standardization process of **ODRL 2.2**, which aimed to provide a common information model for representing such policies.
-
-Since around **2020**, organizations have started exploring ODRL for **access and usage control enforcement** beyond DRM. This shift created a need for **software and tooling** capable of evaluating ODRL policies in operational environments. For example, projects like Solid have considered ODRL for data access control (see related [issues](https://github.com/solid/authorization-panel/issues)), but these efforts stalled due to the **lack of a formalized, systematic evaluation approach**.
-
-Recently, significant progress has been made toward formalizing ODRL semantics. The ODRL Formal Semantics Community Group is working on:
-- **Standardizing inputs** for policy evaluation (e.g., stateefining outputs** through the Compliance Report Model.
-- Developing a **formal semantics** for ODRL to enable consistent and interoperable evaluations.
-
-As of today (**15 September 2025**), these efforts are ongoing. This document aims to provide an **overview of existing tools, frameworks, and approaches** for ODRL policy evaluation, helping practitioners and researchers navigate the current landscape and contribute to these standardization efforts.
-
-
 ## ODRL Evaluators
 
 An ODRL Evaluator is defined as follows by the [ODRL Information Model 2.2](https://www.w3.org/TR/odrl-model/) as
@@ -69,7 +55,7 @@ The table has three columns
 ## Frameworks using ODRL
 
 - [ODRL-Test-Suite](https://w3id.org/force/test-suite)
-- [User-managed-access (UMA server)](https://github.com/SolidLabResearch/user-managed-access)
+- [User-Managed Access (UMA) server](https://github.com/SolidLabResearch/user-managed-access)
 - [FORCE UI](https://w3id.org/force/demo)
 - [FORCE specification suite](https://w3id.org/force)
 - [Gaia-X Wizard](https://wizard.lab.gaia-x.eu/development)
