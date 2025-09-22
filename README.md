@@ -97,11 +97,18 @@ The table has three columns
 ### ODRL utilities
 
 - [MyData ODRL policy creator](https://odrl-pap.mydata-control.de/)
+  - User nterface to create ODRL (or [IDSA](https://international-data-spaces-association.github.io/DataspaceConnector/Documentation/v5/UsageControl)) policies in JSON-LD. Additionally, it provides a human readable snippet elaborating the policy.
 - [ODRL Shape validation](https://github.com/woutslabbinck/ODRL-shape)
+  - A repository that helps verify whether policies comply with the ODRL Information Model.
+  It includes [SHACL](https://www.w3.org/TR/shacl/) (Shapes Constraint Language) shapes for ODRL, along with supporting code to execute SHACL validation locally.
 - [ODRL Validation implementation](https://odrlapi.appspot.com/)
+  - User interface for validating ODRL policies against the Information Model.
 - [Deontic Policy Consistency Checker](https://knowledgeonwebscale.github.io/n3s-policy-consistency-checker/)
+  - User interface to evaluate policies for internal inconsistencies. 
 - [LLM4ODRL](https://github.com/Daham-Mustaf/LLM4ODRL)
+  - An ontology-guided approach for converting instructions into ODRL usage policies using Large Language Models. The repository also contains [SHACL](https://www.w3.org/TR/shacl/) shapes for ODRL.
 - [ODRL2SHACL](https://github.com/paolo7/ODRL2SHACL)
+  - A tool to compare two policies and detect conflicts by leveraging [SHACL](https://www.w3.org/TR/shacl/). It is developed for policy negotiation.
 
 ## How to contribute
 
