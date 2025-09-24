@@ -83,6 +83,10 @@ The table has three columns
 - [Solid Agent UCP demo](https://github.com/SolidLabResearch/Solid-Agent/tree/feat/sosy/documentation/ucp)
   - a Web agent-based solution where an agent decomposes ODRL policies into actionable tasks (such as granting and retracting access to resources) using declarative condition-action rules and takes care of executing such tasks, by modifying the Access Control Rules of [Solid](https://solidproject.org/TR/protocol) resources.
   - Created by [KNoWS](https://knows.idlab.ugent.be/) for the [Solidlab](https://solidlab.be/) project (maintainer: [Wout Slabbinck](mailto:wout.slabbinck@ugent.be)).
+- [FIWARE Data Space Connector](https://github.com/FIWARE/data-space-connector/tree/main)
+  - Implementation of the [DSBA Technical Convergence recommendations](https://data-spaces-business-alliance.eu/wp-content/uploads/dlm_uploads/Data-Spaces-Business-Alliance-Technical-Convergence-V2.pdf), related to dataspaces. It uses ODRL as one policy language in an XACML architecture, using the [ODRL-PAP](https://github.com/wistefan/odrl-pap) component.
+- [sovity EDC Community Edition (EDC CE)](https://github.com/sovity/edc-ce/tree/main)
+  - Extension of the [EDC](https://github.com/eclipse-edc/Connector)
 
 ### Protocols that point to ODRL
 
@@ -98,13 +102,22 @@ The table has three columns
 ### ODRL utilities
 
 - [MyData ODRL policy creator](https://odrl-pap.mydata-control.de/)
+  - User interface to create ODRL (or [IDSA](https://international-data-spaces-association.github.io/DataspaceConnector/Documentation/v5/UsageControl)) policies in JSON-LD. Additionally, it provides a human readable snippet elaborating the policy.
 - [ODRL Shape validation](https://github.com/woutslabbinck/ODRL-shape)
+  - A repository that helps verify whether policies comply with the ODRL Information Model.
+  It includes [SHACL](https://www.w3.org/TR/shacl/) (Shapes Constraint Language) shapes for ODRL, along with supporting code to execute SHACL validation locally.
 - [ODRL Validation implementation](https://odrlapi.appspot.com/)
+  - User interface for validating ODRL policies against the Information Model.
 - [Deontic Policy Consistency Checker](https://knowledgeonwebscale.github.io/n3s-policy-consistency-checker/)
+  - User interface to evaluate policies for internal inconsistencies. 
 - [LLM4ODRL](https://github.com/Daham-Mustaf/LLM4ODRL)
+  - An ontology-guided approach for converting instructions into ODRL usage policies using Large Language Models. The repository also contains [SHACL](https://www.w3.org/TR/shacl/) shapes for ODRL.
 - [ODRL2SHACL](https://github.com/paolo7/ODRL2SHACL)
-- `Work In Progress`[ODRL Toolbox (validation, evaluation, compliance)](https://gitlab.com/gaia-x/lab/policy-reasoning/odrl-toolbox)
+- [ODRL Toolbox ](https://gitlab.com/gaia-x/lab/policy-reasoning/odrl-toolbox)
+  - A set of tools to validate, evaluate and check compliance for ODRL
 
 ## How to contribute
 
 When there is something missing in this list, feel free to add it yourself by opening a [pull request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork).
+
+Further questions can also by creating issues or asking directly to [Wout Slabbinck](mailto:wout.slabbinck@ugent.be) (maintainer of this repository).
