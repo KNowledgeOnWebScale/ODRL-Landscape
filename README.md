@@ -1,5 +1,7 @@
 # ODRL Landscape
 
+**NOTE: as of 06/10/2025 the ODRL Landscape document will be maintained (via PRs) at the W3C ODRL repository: https://github.com/w3c/odrl/tree/master/landscape**
+
 This document is collaborative effort that attempts to collect all projects, tooling and implementations that work with the Open Digital Rights Language (ODRL).
 
 ## What is ODRL?
